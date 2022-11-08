@@ -1,0 +1,24 @@
+.messages {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.users{
+	text-align: center;
+}
+
+.users a {
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.users a:hover {
+	background-color: #fff9;
+}
+
+.dialogs p {
+	padding: 10px;
+	background: rgb(47, 53, 81);
+	border-radius: 10px;
+}

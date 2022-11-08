@@ -1,0 +1,13 @@
+nav {
+	text-align: center;
+}
+
+nav a {
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+nav a:hover {
+	background-color: #fff9;
+}
