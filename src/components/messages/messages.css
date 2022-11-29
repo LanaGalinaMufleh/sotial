@@ -11,6 +11,8 @@
 	display: block;
 	padding: 10px;
 	border-radius: 10px;
+	color: white;
+	text-decoration: none;
 }
 
 .users a:hover {

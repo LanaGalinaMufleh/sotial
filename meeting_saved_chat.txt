@@ -1,0 +1,2 @@
+18:55:19 Von  Сергей Колесников  an  Alle:
+	1.  Теория:		https://learn-reactjs.ru/training-project/routing - про маршрутизацию	https://reactrouter.com/web/api/BrowserRouter - документация по BrowserRouter( на английском, пусть потихоньку привыкают)	https://reactrouter.com/web/api/Route - про Route 	2. Практика:		Найти в документации, что такое Route exact, для чего он нужен и применить на сайте.

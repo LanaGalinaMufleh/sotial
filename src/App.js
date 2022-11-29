@@ -13,9 +13,9 @@ function App() {
       <Navbar/>
       <div className='content'>
         <Routes>
-        <Route path='/' element={<Profile name="Elon Musk"/>}/>
-        <Route path='/profile' element={<Profile name="Elon Musk"/>}/>
-        <Route path='/messages' element={<Messages/> } />
+        <Route exact path='/' element={<Profile name="Elon Musk"/>}/>
+        <Route exact path='/profile' element={<Profile name="Elon Musk"/>}/>
+        <Route exact path='/messages' element={<Messages/> } />
         </Routes>
       </div>
       </BrowserRouter>

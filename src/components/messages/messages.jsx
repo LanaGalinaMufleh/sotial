@@ -1,17 +1,20 @@
+
+import Message from "./message"
 import "./messages.css"
+import User from "./user"
 
 function Messages(props){
 	return(
 		<div className="messages">
 			<div className="users">
-				<a>Donald Trump</a>
-				<a>Bill Gates</a>
-				<a>Joe Biden</a>
+				<User id="1" name="Donald Trump"/>
+				<User id="2" name="Bill Gates"/>
+				<User id="3" name="Joe Biden"/>
 			</div>
 			<div className="dialogs">
-				<p>Hello. I am great</p>
-				<p>Hello. I am richer than you</p>
-				<p>Where I am?</p> 
+				<Message message="Hello. I am great"/>
+				<Message message="Hello. I am richer than you"/>
+				<Message message="Where I am?"/>
 				<textarea></textarea><br />
 				<button>Submit message</button>
 			</div>
