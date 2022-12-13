@@ -23,3 +23,10 @@
 	width: 40px;
 	margin: 5px;
 }
+
+.like {
+	display: block;
+	margin-top: -15px;
+   color: rgb(150, 170, 140);
+	font-style: italic;
+}

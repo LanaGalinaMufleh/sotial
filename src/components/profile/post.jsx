@@ -6,6 +6,7 @@ function Post(props) {
 					<img src={ava_mini} alt="" />
 					<span>{props.name}</span>
 					<p>{props.message}</p>
+					<span className="like">❤ {props.likes}</span>
 		</div>
 	)
 }

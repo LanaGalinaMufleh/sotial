@@ -5,7 +5,7 @@ import Messages from './components/messages/messages';
 import Navbar from './components/navbar/navbar';
 import Profile from './components/profile/profile';
 
-function App() {
+function App(props) {
   return (
     <div className='wrapper'>
       <BrowserRouter>
@@ -13,9 +13,9 @@ function App() {
       <Navbar/>
       <div className='content'>
         <Routes>
-        <Route exact path='/' element={<Profile name="Elon Musk"/>}/>
-        <Route exact path='/profile' element={<Profile name="Elon Musk"/>}/>
-        <Route exact path='/messages' element={<Messages/> } />
+        <Route exact path='/' element={<Profile postData={props.postData} name="Elon Musk"/>}/>
+        <Route exact path='/profile' element={<Profile postData={props.postData} name="Elon Musk"/>}/>
+        <Route exact path='/messages' element={<Messages dialogNames={props.dialogNames} messageItems={props.messageItems} /> } />
         </Routes>
       </div>
       </BrowserRouter>

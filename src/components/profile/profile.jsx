@@ -3,6 +3,7 @@ import "./profile.css"
 import Post from "./post"
 import ProfileInfo from "./profileinfo"
 
+
 function Profile(props) {
 	return(
 		<div className="profile">
@@ -10,13 +11,12 @@ function Profile(props) {
 			<div className="posts">
 				<input type="text" placeholder="Write a text"/>
 				<button>Add post</button>
-				<Post name={props.name} message="hello"/>
-				<Post name={props.name} message="i am Elon Musk"/>
-				<Post name={props.name} message="i love mars"/>
-				<Post name={props.name} message="tesla"/>
-				<Post name={props.name} message="i am rich"/>
+				{props.postData.map((e)=>
+				<Post id={e.id} name={props.name} message={e.message} likes={e.likes}/>
+				)}
 			</div>
 		</div>
 	)
 }
 export default Profile
+
