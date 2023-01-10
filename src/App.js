@@ -10,12 +10,12 @@ function App(props) {
     <div className='wrapper'>
       <BrowserRouter>
       <Header/>
-      <Navbar/>
+      <Navbar sideBar={props.state.sideBar}/>
       <div className='content'>
         <Routes>
-        <Route exact path='/' element={<Profile profilePage={props.state.profilePage}/>}/>
-        <Route exact path='/profile' element={<Profile profilePage={props.state.profilePage}/>}/>
-        <Route exact path='/messages' element={<Messages dialogesPage={props.state.dialogesPage} /> } />
+        <Route exact path='/' element={<Profile profilePage={props.state.profilePage} addPost={props.addPost}/>}/>
+        <Route exact path='/profile' element={<Profile profilePage={props.state.profilePage} addPost={props.addPost}/>}/>
+        <Route exact path='/messages' element={<Messages dialogesPage={props.state.dialogesPage} addMessage={props.addMessage} /> } />
         </Routes>
       </div>
       </BrowserRouter>

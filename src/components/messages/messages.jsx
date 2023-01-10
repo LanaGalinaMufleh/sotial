@@ -1,9 +1,14 @@
 
+import React from "react"
 import Message from "./message"
 import "./messages.css"
 import User from "./user"
+let messText = React.createRef()
 
 function Messages(props){
+	function addMessage() {
+		props.addMessage(messText.current.value)
+	}
 	return(
 		<div className="messages">
 			<div className="users">
@@ -13,8 +18,8 @@ function Messages(props){
 			</div>
 			<div className="dialogs">
 				{props.dialogesPage.messageItems.map((e)=><Message message={e.message}/>)}
-				<textarea></textarea><br />
-				<button>Submit message</button>
+				<textarea ref={messText}></textarea><br />
+				<button onClick={addMessage}>Submit message</button>
 			</div>
 		</div>
 	)

@@ -13,3 +13,31 @@ nav a {
 nav a:hover {
 	background-color: #fff9;
 }
+
+.friends {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.friend {
+	width: 30%;
+	margin: 1%;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.friends h4{
+	width: 100%;
+
+}
+
+.friend img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+	height: 49px;
+}
+
+.friend p {
+	font-size: smaller;
+}
