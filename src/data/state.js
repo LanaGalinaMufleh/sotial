@@ -1,4 +1,5 @@
-import { rerenderTree } from "../render"
+
+
 
 let state = {
 	profilePage: {
@@ -13,6 +14,8 @@ let state = {
 		profileInfo: [
 			{ id: 1, name: "Elon Musk", ava: "Elon-Musk.webp" }
 		],
+
+		newPostText: ""
 	},
 
 	dialogesPage: {
@@ -27,7 +30,8 @@ let state = {
 			{ id: 2, message: "Hello. I am richer than you" },
 			{ id: 3, message: "Where I am?" },
 			{ id: 4, message: "Who is there? 8)" }
-		]
+		],
+		newMessText: ""
 	},
 
 	sideBar: {
@@ -39,22 +43,45 @@ let state = {
 	}
 }
 
-export let addPost = (text)=>{
+let rerenderTree=(state)=>{
+	return
+}
+
+export let subscribe = (obsever)=>{
+	rerenderTree = obsever
+}
+
+export let addPost = ()=>{
 	let newPost = {
 		id:6,
-		message:text ,
+		message:state.profilePage.newPostText ,
 		likes:0
 	}
 	state.profilePage.postData.unshift(newPost)
+	state.profilePage.newPostText = ""
+	rerenderTree(state)
+
+}
+
+export let onPostChange = (text)=>{
+	state.profilePage.newPostText=text;
 	rerenderTree(state)
 }
 
-export let addMessage = (text)=>{
+
+export let addMessage = ()=>{
 	let newMess = {
 		id:5,
-		message:text
+		message:state.dialogesPage.newMessText
 	}
 	state.dialogesPage.messageItems.push(newMess)
+	state.dialogesPage.newMessText= ""
+	rerenderTree(state)
+
+}
+
+export let onMessChange = (text)=>{
+	state.dialogesPage.newMessText=text;
 	rerenderTree(state)
 }
 
